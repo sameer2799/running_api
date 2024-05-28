@@ -28,9 +28,10 @@ public class RunController {
         Optional<Run> run = runRepository.findById(id);
         if (run.isEmpty()){
             throw new RunNotFoundException();
-/*                next line is same as above
-            throw new ResponseStatusException(HttpStatusCode.valueOf(400), "Run not found");
-*/      }
+//                next line is same as above
+//            throw new ResponseStatusException(HttpStatusCode.valueOf(400), "Run not found");
+
+      }
         return run.get();
     }
 
@@ -60,9 +61,10 @@ public class RunController {
         return runRepository.findAllByLocation(location);
     }
 
-/*    @GetMapping("/")
+    @GetMapping("/")
     String home() {
         return "Welcome to the Gliderz API!";
     }
-*/
+
+
 }
